@@ -1,0 +1,102 @@
+<!-- HTML code for the GUI -->
+
+<html>
+
+    <title>Transcript Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+        .alert {
+          padding: 15px;
+          background-color: #f44336;
+          color: white;
+          width: 500px;
+      }
+
+      .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+      }
+
+      .closebtn:hover {
+          color: black;
+      }
+
+    </style>
+
+    <body class="w3-light-grey">
+
+        <div class = "w3-content" style="max-width:1400px">
+
+            <header class="w3-container w3-center w3-padding-32">
+                <h1><b>Transcript Generator</b></h1>
+            </header>
+
+            <form class="w3-container w3-center" method="post" enctype=multipart/form-data>
+
+                <table border=0 align="center">
+
+                    <tr>
+                        <td>Upload Seal: </td>
+                        <td >&nbsp;&nbsp;<input type="file"  accept=".jpg,.png,.bmp,.tiff,.jpeg" name="file1" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td><br>Upload Signature: </td>
+                        <td>&nbsp;&nbsp;<input type="file"  accept=".jpg,.png,.bmp,.tiff,.jpeg" name="file2" autocomplete="off"></td>
+                    </tr>
+
+                    <tr>
+                        <td><br><label>Roll Number Range: </label>&nbsp;&nbsp;</td>
+                        <td  align="left">&nbsp;&nbsp;<input  class="form-control"name="roll_range" ></td>
+                    </tr>
+
+                </table>
+                <br>
+
+                <table border=0 align="center">
+
+                     <tr>   
+                        <td align="center">
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                            {% for message in messages %}
+                            <div class="alert" align="center">
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                                <span>{{message}}</span>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
+                        </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                          <br><input type=submit name = "action" value= "Generate Transcripts for Given Roll Number">
+                        </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                          <br><input type="submit" name = "action" value= "Generate all Transcripts">
+                      </td>
+                    </tr>
+
+                </table>
+
+            </form>
+        
+        </div>
+
+    </body>
+
+</html>
