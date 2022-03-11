@@ -10,6 +10,6 @@ HTML,TeX,Python,Flask,Javascript,CSS,JS
 # Credits
 This project involved group of 3 students with good team work and it gave me an oppurtunity to learn and gave me chnace to explore and get my hands on new skills.
 To resolve the manual calculation of xlsx file of candidate involving positive and negative score this project is all about.
-(https://stackoverflow.com/questions/2252726/how-to-create-pdf-files-in-python)
-\href{https://towardsdatascience.com/creating-pdf-files-with-python-ad3ccadfae0f}{https://towardsdatascience.com/creating-pdf-files-with-python-ad3ccadfae0f}
-\href{https://stackoverflow.com/questions/2252726/how-to-create-pdf-files-in-python}{https://stackoverflow.com/questions/2252726/how-to-create-pdf-files-in-python}
+https://stackoverflow.com/questions/2252726/how-to-create-pdf-files-in-python
+https://towardsdatascience.com/creating-pdf-files-with-python-ad3ccadfae0f
+https://stackoverflow.com/questions/2252726/how-to-create-pdf-files-in-python
